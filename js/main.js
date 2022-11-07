@@ -5,8 +5,9 @@
  */
 function isCorrect(value) {
   let temp = Number(value);
-  return Number.isFinite(value) ? true : false;
+  return isFinite(temp);
 }
+// alert(isCorrect(55)); function testing
 
 /* Task 0 */
 /**
