@@ -7,7 +7,9 @@ function isCorrect(value) {
   let temp = Number(value);
   return isFinite(temp);
 }
-// alert(isCorrect(55)); function testing
+
+//console.log('isCorrect test -> ' + isCorrect(55)); -> true
+//console.log('isCorrect test -> ' + isCorrect('qwerty')); -> false
 
 /* Task 0 */
 /**
@@ -49,8 +51,10 @@ if (!isCorrect(userDigit)) {
 
 /* Task 2 */
 const multiplicity = function checkMultiplicity(digit1, digit2) {
-  return digit1 % digit2 === 0 ? true : false;
+  return digit1 % digit2 === 0;
 };
+
+// console.log('multiplicity test -> ' + multiplicity(15, 5)); -> true
 
 alert(`${multiplicity(25, 5)}`); // true
 alert(`${multiplicity(15, 3)}`); // true
@@ -61,8 +65,11 @@ alert(`${multiplicity(15, 4)}`); // false
 // треугольник будет существовать только тогда, когда сумма двух сторон будет больше длинны третьей стороны.
 
 function isThereATriangle(a, b, c) {
-  return a + b > c && a + c > b && c + b > a ? true : false;
+  return a + b > c && a + c > b && c + b > a;
 }
+
+//console.log('isThereATriangle test -> ' + isThereATriangle(2, 3, 4)); -> true
+//console.log('isThereATriangle test -> ' + isThereATriangle(5, 1, 8)); -> false
 
 let firstSide = Number(prompt('Enter a first side of the triangle'));
 let secondSide = Number(prompt('Enter a second side of the triangle'));
