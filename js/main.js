@@ -4,7 +4,7 @@
  * @returns {boolean} true - if value is a finite number, else returns false
  */
 function isCorrect(value) {
-  let temp = Number(value);
+  const temp = Number(value);
   return isFinite(temp);
 }
 
@@ -18,10 +18,10 @@ function isCorrect(value) {
  * @return {boolean} true if user's age is functional and else returns false
  */
 function isWorkingAgePerson(age) {
-  return age >= 16 && age <= 65 ? true : false;
+  return age >= 16 && age <= 65;
 }
 
-const userAge = Number(prompt('Enter Your age'));
+const userAge = prompt('Enter Your age');
 if (!isCorrect(userAge)) {
   alert('You entered incorrect meaning! Error!');
 } else if (isWorkingAgePerson(userAge)) {
@@ -50,7 +50,7 @@ if (!isCorrect(userDigit)) {
 }
 
 /* Task 2 */
-const multiplicity = function checkMultiplicity(digit1, digit2) {
+const multiplicity = function (digit1, digit2) {
   return digit1 % digit2 === 0;
 };
 
@@ -88,7 +88,7 @@ if (!isCorrect(firstSide) || !isCorrect(secondSide) || !isCorrect(thirdSide)) {
 }
 
 /* Task 4 */
-const PerimeterOfATriangle = function findPerimeterOfATriangle(a, b, c) {
+const PerimeterOfATriangle = function (a, b, c) {
   return a + b + c;
 };
 
@@ -101,18 +101,19 @@ const PerimeterOfATriangle = function findPerimeterOfATriangle(a, b, c) {
  * @returns {number} area of a triangle
  */
 function findAreaOfATriangle(PerimeterOfATriangle, a, b, c) {
+  const halfPerimeter = PerimeterOfATriangle(a, b, c) / 2;
   return Math.sqrt(
-    PerimeterOfATriangle *
-      (PerimeterOfATriangle - a) *
-      (PerimeterOfATriangle - b) *
-      (PerimeterOfATriangle - c)
+    halfPerimeter *
+      (halfPerimeter - a) *
+      (halfPerimeter - b) *
+      (halfPerimeter - c)
   );
 }
 
 /**
  * @func findAreaOfARectangle calculates area of a rectangle
- * @param {valitity} a a first side of rectangle
- * @param {valitity} b a second side of rectangle
+ * @param {number} a a first side of rectangle
+ * @param {number} b a second side of rectangle
  * @returns {number} area of a rectangle
  */
 function findAreaOfARectangle(a, b) {
