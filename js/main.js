@@ -88,19 +88,19 @@ if (!isCorrect(firstSide) || !isCorrect(secondSide) || !isCorrect(thirdSide)) {
 }
 
 /* Task 4 */
-const PerimeterOfATriangle = function (a, b, c) {
+const perimeterOfATriangle = function (a, b, c) {
   return a + b + c;
 };
 
 /**
  *
- * @param {number} PerimeterOfATriangle it's a perimeter of triangle
+ * @param {function} perimeterOfATriangle calculates perimeter of a triangle
  * @param {number} a the first side of triangle
  * @param {number} b the second side of triangle
  * @param {numbre} c the third side of triangle
  * @returns {number} area of a triangle
  */
-function findAreaOfATriangle(PerimeterOfATriangle, a, b, c) {
+function findAreaOfATriangle(perimeterOfATriangle, a, b, c) {
   const halfPerimeter = PerimeterOfATriangle(a, b, c) / 2;
   return Math.sqrt(
     halfPerimeter *
