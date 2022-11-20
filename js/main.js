@@ -101,7 +101,7 @@ const perimeterOfATriangle = function (a, b, c) {
  * @returns {number} area of a triangle
  */
 function findAreaOfATriangle(perimeterOfATriangle, a, b, c) {
-  const halfPerimeter = PerimeterOfATriangle(a, b, c) / 2;
+  const halfPerimeter = perimeterOfATriangle(a, b, c) / 2;
   return Math.sqrt(
     halfPerimeter *
       (halfPerimeter - a) *
@@ -138,7 +138,7 @@ switch (userChoice) {
     } else {
       alert(
         `The area of the triangle is ${findAreaOfATriangle(
-          PerimeterOfATriangle(firstSide, secondSide, thirdSide),
+          perimeterOfATriangle(firstSide, secondSide, thirdSide),
           firstSide,
           secondSide,
           thirdSide
